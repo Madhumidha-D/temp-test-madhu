@@ -1,0 +1,16 @@
+name: test
+
+on:
+  push:
+    branches:
+      - main
+      - local
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+      - uses: PaulHatch/semantic-version@v5.0.0-alpha2
